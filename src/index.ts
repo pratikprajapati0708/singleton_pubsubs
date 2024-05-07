@@ -11,3 +11,5 @@ setInterval(() => {
         moves: []
     })
 }, 5000)
+
+//ws server
