@@ -6,10 +6,10 @@ interface Game{
 }
 
 export class GameManager {
-    private games : Game[] = []
+     games : Game[] = [];
 
     constructor(){
-        this.games = []
+        this.games = [];
     }
 
     addmove(gameId : string, move : string){

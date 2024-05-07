@@ -1,5 +1,4 @@
-import { GameManager } from "./store";
-const gameManager = new GameManager();
+import { gameManager } from "./store";
 
 export function startLogger() {
     setInterval(() => {
