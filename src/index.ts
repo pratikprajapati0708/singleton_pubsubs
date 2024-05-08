@@ -1,11 +1,15 @@
 import { GameManager } from "./store";
 import { startLogger } from "./logger";
 
-const gameManager = new GameManager();
 startLogger();
 
 setInterval(() => {
-    gameManager.addGame(Math.random().toString())
+    GameManager.getInstance().addGame({
+        id: Math.random().toString(),
+        "whitePlayer": "pratik",
+        "blackPlayer": "test",
+        moves: []
+    })
 }, 5000)
 
 //ws server
