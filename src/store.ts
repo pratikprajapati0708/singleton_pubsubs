@@ -12,6 +12,7 @@ export class GameManager {
         this.games = [];
     }
 
+    //for globally getting getInstance used static
     static getInstance(){
         //create single instance of game manager and return it
         if(GameManager.instance){
