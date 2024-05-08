@@ -6,10 +6,19 @@ interface Game{
 }
 
 export class GameManager {
-     games : Game[] = [];
-
-    constructor(){
+    private games : Game[] = [];
+    private static instance: GameManager;
+    private constructor(){
         this.games = [];
+    }
+
+    static getInstance(){
+        //create single instance of game manager and return it
+        if(GameManager.instance){
+            return GameManager.instance
+        }
+        GameManager.instance = new GameManager();
+        return GameManager.getInstance;
     }
 
     addmove(gameId : string, move : string){
@@ -31,4 +40,3 @@ export class GameManager {
         console.log(this.games);
     }
 }
-export const gameManager = new GameManager();
